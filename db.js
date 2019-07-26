@@ -2,7 +2,7 @@ var mysql = require('mysql');
 
 var pool;
 
-exports.connect = function() {
+exports.connect = function(done) {
     pool = mysql.createPool({
         connectionLimit: 100,
         host     : 'localhost',
